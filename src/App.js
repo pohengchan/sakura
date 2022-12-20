@@ -1,5 +1,5 @@
 import './App.css';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import DataFetching from './components/DataFetching';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
         <DataFetching/>
       </header>
 
-      <Link to='/fortune'>Go to your fortune</Link>
+      {/* <Link to='/fortune'>Go to your fortune</Link> */}
     </div>
   );
 }

@@ -1,9 +1,18 @@
 import { useEffect, useState } from "react"
 import React from 'react'
 import axios from "axios"
-import ToggleModal from "./ToggleModal";
-//import Dashboard from "./Dashboard";
-//import DialogBox from "./DialogBox";
+//import ToggleModal from "./ToggleModal";
+import Modal from 'react-modal';
+import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+Modal.setAppElement("#root");
+var cardText = '';
+var pastCard = 0;
+var presentCard = 0;
+var futureCard = 0;
+var modalText = '';
+var turnText = 'Please turn over another card'
 
 function DataFetching() {
     const [cards,setCards] = useState([])
@@ -19,42 +28,82 @@ function DataFetching() {
         })
     }, [])
 
-    //Get chosen card info
-      //const [cardInfo,setCardInfo] = useState([])
-      //Get chosen card info
     //Hover
-    //const [showText, setShowText] = useState(false)
     const handleMouseEnter = e => {
         e.target.style.background = "maroon";
-        //console.log(e.target[e.target.selectedIndex].id );
-        //setShowText(true)
       }
-      const handleMouseLeave = e => {
+    const handleMouseLeave = e => {
         e.target.style.background = "lightgoldenrodyellow"
-        //setShowText(false)
       };
-      //Hover
-      //{showText && <p className="message">Hovering</p>}
       
-      const showValues = (id) => {
-        console.log("get values" + id)
-        ToggleModal()
-      }
+    //Get chosen card info
+    const showValues = (id, engName) => {
+        console.log("get values" + id + engName)
+        cardText = engName;
+        if (pastCard ===id || presentCard===id){
+            modalText = 'You have already chosen this card. Please choose another.';
+        };
+        if (pastCard===0){
+            pastCard=id;
+            modalText = 'This represents your past';
+        };
+        if (pastCard>0 && presentCard===0 && pastCard!==id){
+            presentCard=id;
+            modalText = 'This represents your present';
+        };
+        if (pastCard>0 && presentCard>0 && presentCard!==id && futureCard===0){
+            futureCard=id;
+            modalText = 'This represents your future';
+            turnText = 'Find out what your fortune is!'
+        };
 
-  return (
-    <div>   
-        {
-        cards.map((card,index) =>
-        <>
-            <img key={index} src="https://i.ibb.co/LJSmQ4f/Reverso-Clow.jpg" className="Card-Reverse" style={{cursor:'pointer'}} alt={`card face down ${card.englishName}`} onClick={()=>showValues(card.id)} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/>
-        </>
+        //console.log(`ID: ${id} ;${pastCard} and ${presentCard} and ${futureCard}`)
+        
+        toggleModal()
+    }   
 
-        )
+    //Get chosen card info
+  
+    const [isOpen, setIsOpen] = useState(false);
+    const navigate = useNavigate();
+    function toggleModal() {
+        setIsOpen(!isOpen);
+        console.log(`Toggle modal passes: ${cardText}`);
+        if (futureCard>0 && isOpen === true){
+        navigate("/fortune")
+        return <Navigate replace to="/fortune" />;
         }
+    }
 
-    </div>
+    return (
+        <div>   
+            {
+            cards.map((card,index) =>
+            <>
+                <img 
+                key={index} 
+                src="https://i.ibb.co/LJSmQ4f/Reverso-Clow.jpg" 
+                className="Card-Reverse" 
+                style={{cursor:'pointer'}} 
+                alt={`card face down ${card.englishName}`} 
+                onClick={()=>{showValues(card.id, card.englishName)}} 
+                onMouseEnter={handleMouseEnter} 
+                onMouseLeave={handleMouseLeave}/>
+            </>
+            )}
+            <Modal
+                isOpen={isOpen}
+                onRequestClose={toggleModal}
+                contentLabel="My dialog"
+            >
+                <h3>{cardText}</h3>
+                <p>{modalText}</p>
+                <p>{turnText}</p>
+                <button onClick={toggleModal}>OK</button>
+            </Modal>
+        </div>                          
     
-  )
+    )
 }
 
 export default DataFetching
