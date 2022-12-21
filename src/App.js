@@ -1,5 +1,5 @@
 import './App.css';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import DataFetching from './components/DataFetching';
 
 function App() {
@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       
       <header>
-        <h1>SAKURA TAROT</h1>
-        <h2>Choose 3 cards for your fortune!</h2>
+      <Link className='logoSakura' to='/'>SAKURA TAROT</Link>
+        <h2>Elige 3 cartas por su fortuna!</h2>
         <DataFetching/>
       </header>
 
