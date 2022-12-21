@@ -1,18 +1,17 @@
-.App {
+* {
   text-align: center;
   background-color: lightgoldenrodyellow;
   color:darkred;
 }
 
+.logoSakura {
+  font-size:xx-large;
+  font-weight: 800;
+}
 .Card-Reverse {
   width:4em;
   padding: 0.5em;
   background: lightgoldenrodyellow;
-
-
-  /*border-width: 0.15em;
-  border-style:solid;
-  border-color: blue;*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
