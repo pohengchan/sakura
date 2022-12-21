@@ -21,7 +21,8 @@ var pastCardImg = '';
 var presentCardImg = '';
 var futureCardImg = '';
 var modalText = '';
-var turnText = 'Elige otra carta'
+var turnText = 'Elige otra carta para su fortuna.';
+var cardImage = '';
 
 function DataFetching() {
     const [cards,setCards] = useState([])
@@ -49,29 +50,31 @@ function DataFetching() {
     const showValues = (id, espName, meaning, cardimg) => {
         console.log("get values" + id + espName)
         cardText = espName;
+        cardImage = cardimg;
         if (pastCard ===id || presentCard===id){
-            modalText = 'Ya ha elegido esta carta. Elige otra por favor.';
+            modalText = 'Ya ha elegido esta carta!';
+            turnText = ' Elige otra carta por favor.'
         };
         if (pastCard===0){
             pastCard=id;
             pastCardName=espName;
             pastCardMeaning=meaning;
             pastCardImg=cardimg;
-            modalText = 'Representa su pasado';
+            modalText = 'Representa su pasado.';
         };
         if (pastCard>0 && presentCard===0 && pastCard!==id){
             presentCard=id;
             presentCardName=espName;
             presentCardMeaning=meaning;
             presentCardImg=cardimg;
-            modalText = 'Representa su presente';
+            modalText = 'Representa su presente.';
         };
-        if (pastCard>0 && presentCard>0 && presentCard!==id && futureCard===0){
+        if (pastCard>0 && presentCard>0 && pastCard!==id && presentCard!==id && futureCard===0){
             futureCard=id;
             futureCardName=espName;
             futureCardMeaning=meaning;
             futureCardImg=cardimg;
-            modalText = 'Representa su futuro';
+            modalText = 'Representa su futuro.';
             turnText = 'Ve a su fortuna!'
         };
 
@@ -123,7 +126,7 @@ function DataFetching() {
                 <img 
                 key={index} 
                 src="https://i.ibb.co/LJSmQ4f/Reverso-Clow.jpg" 
-                className="Card-Reverse" 
+                className="cardReverse" 
                 style={{cursor:'pointer'}} 
                 alt={`card face down ${card.spanishName}`} 
                 onClick={()=>{showValues(card.id, card.spanishName, card.meaning, card.sakuraCard)}} 
@@ -136,10 +139,16 @@ function DataFetching() {
                 onRequestClose={toggleModal}
                 contentLabel="My dialog"
             >
-                <h3>{cardText}</h3>
-                <p>{modalText}</p>
-                <p>{turnText}</p>
-                <button onClick={toggleModal}>OK</button>
+                <div className="modalbox">
+                    <h3>{cardText}</h3>
+                    <img 
+                        src={cardImage} 
+                        className="modalImage" 
+                        alt={`carta ${cardText}`}/>
+                    <p>{modalText}</p>
+                    <p>{turnText}</p>
+                    <button onClick={toggleModal}>OK</button>
+                </div>
             </Modal>
         </div>                          
     
@@ -150,3 +159,4 @@ export default DataFetching
 //https://www.youtube.com/watch?v=bYFYF2GnMy8
 //https://www.codingdeft.com/posts/react-on-hover/#displaying-a-text-when-the-button-is-hovered
 //https://www.newline.co/@dmitryrogozhny/how-to-display-modal-dialog-in-react-with-react-modal--dbf46cda
+//https://plainenglish.io/blog/how-to-pass-data-between-pages-in-react-router-dom-v6

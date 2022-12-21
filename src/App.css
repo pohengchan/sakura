@@ -4,16 +4,40 @@
   color:darkred;
 }
 
+button {
+  margin: 1em;
+  height: 2em;
+  width: 4.5em;
+  border-radius: 25%;
+  border-color: darkred;
+  background-color: darkred;
+  color: lightgoldenrodyellow;
+
+}
+.modalbox {
+  height: 90%;
+}
+.modalImage {
+  width:6em;
+  padding: 0.5em;
+}
 .logoSakura {
   font-size:xx-large;
   font-weight: 800;
 }
-.Card-Reverse {
+.cardReverse {
   width:4em;
   padding: 0.5em;
   background: lightgoldenrodyellow;
 }
-
+.fortuneContainer {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 1em;
+}
+.fortuneText {
+  width: 80%;
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
