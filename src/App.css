@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  background-color: lightgoldenrodyellow;
+  color:darkred;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Card-Reverse {
+  width:4em;
+  padding: 0.5em;
+  background: lightgoldenrodyellow;
+
+
+  /*border-width: 0.15em;
+  border-style:solid;
+  border-color: blue;*/
 }
 
 @media (prefers-reduced-motion: no-preference) {
