@@ -31,7 +31,9 @@ function DataFetching() {
         axios.get('https://6388b6e5a4bb27a7f78f96a5.mockapi.io/sakura-cards/')
         .then(res => {
             console.log(res)
+            res.data.sort(() => Math.floor(Math.random() -0.5));
             setCards(res.data)
+
         })
         .catch(err=> {
             console.log(err)
