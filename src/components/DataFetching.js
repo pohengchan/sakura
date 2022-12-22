@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import React from 'react'
 import axios from "axios"
-//import ToggleModal from "./ToggleModal";
 import Modal from 'react-modal';
 import { createSearchParams, Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
@@ -153,7 +152,6 @@ function DataFetching() {
                 </div>
             </Modal>
         </div>                          
-    
     )
 }
 

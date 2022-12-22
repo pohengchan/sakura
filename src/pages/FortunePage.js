@@ -1,12 +1,14 @@
 import React from 'react'
-import {Link, useSearchParams} from 'react-router-dom'
+import { useSearchParams} from 'react-router-dom'
 
 const FortunePage = () => {
   const [searchparams] = useSearchParams();
   console.log(searchparams.get('pastCardImg'));
   return (
     <>
-      <Link className='logoSakura' to='/'>SAKURA TAROT</Link>
+      <a className="logoSakura"
+          href="/"
+          target="_blank">SAKURA TAROT</a>
       <h2>Vuestra fortuna!</h2>
       
       <div className='fortuneContainer'>
