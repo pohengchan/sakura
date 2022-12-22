@@ -1,71 +1,47 @@
-# Getting Started with Create React App
+## Tabla de Contenido
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. [Información General](#información-general)
+2. [Tecnologías](#tecnologías)
+3. [Herramientas](#herramientas)
+4. [Demo](#demo)
+5. [Prototipo](#prototipo)
+6. [Instalación](#instalación)
 
-## Available Scripts
+## :page_facing_up:Información General
+Sakura Tarot es una pagina que nos diga nuestro pasado, presente y futuro. Pueden seleccionar tres cartas y ver tu fortuna. 
+>
+## :computer:Tecnologías
 
-In the project directory, you can run:
+* Javascript
+* React
+* HTML
+* CSS
 
-### `npm start`
+## 	:hammer:Herramientas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* [Trello](https://trello.com/b/jCXBss3w/sakura-tarot)
+* [Figma](https://www.figma.com/file/OWk9M5JF5rwN7TSynNcfEB/Sakura?node-id=0%3A1&t=2xkw8BIPibVtEYg3-0)
+* [GitHub](https://github.com/Archima20/Sakura)
+* Visual Studio Code
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## :tv:Demo
 
-### `npm test`
+* [Demo](http://127.0.0.1:5500/index.html)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## :loop:Prototipo
 
-### `npm run build`
+* [Escritorio]()
+* [Movil](https://www.figma.com/proto/OWk9M5JF5rwN7TSynNcfEB/Sakura?node-id=1%3A2&scaling=scale-down&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## :minidisc:Instalación
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* [GitHub](https://github.com/Archima20/Sakura)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## :bulb:Acknowledgements
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# sakura
+- [Fetch Data](https://www.youtube.com/watch?v=bYFYF2GnMy8)
+- [Cambiar estilo con el hover](https://www.codingdeft.com/posts/react-on-hover/#displaying-a-text-when-the-button-is-hovered)
+- [Muestra Modal](https://www.newline.co/@dmitryrogozhny/how-to-display-modal-dialog-in-react-with-react-modal--dbf46cda)
+- [Cómo pasar datos entre paginas](https://plainenglish.io/blog/how-to-pass-data-between-pages-in-react-router-dom-v6)
+- [Cómo mostrar datos en orden aleatorio]()

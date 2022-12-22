@@ -158,7 +158,3 @@ function DataFetching() {
 }
 
 export default DataFetching
-//https://www.youtube.com/watch?v=bYFYF2GnMy8
-//https://www.codingdeft.com/posts/react-on-hover/#displaying-a-text-when-the-button-is-hovered
-//https://www.newline.co/@dmitryrogozhny/how-to-display-modal-dialog-in-react-with-react-modal--dbf46cda
-//https://plainenglish.io/blog/how-to-pass-data-between-pages-in-react-router-dom-v6
